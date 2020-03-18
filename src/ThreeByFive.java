@@ -34,6 +34,8 @@
 
 //make a statement to create a blank line here
 
+            System.out.println(" ");
+
 // output all of the numbers again,
 // not just the changed ones
 

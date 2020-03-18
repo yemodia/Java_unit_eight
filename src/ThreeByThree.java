@@ -35,10 +35,27 @@ public class ThreeByThree {
 
 
 //code to output a blank line separating output sets
+
+        System.out.println(" ");
         
 
 
 //code to output all array elements
+        System.out.println(list[0][0]);
+        System.out.println(list[0][1]);
+        System.out.println(list[0][2]);
+
+        System.out.println(list[1][0]);
+        System.out.println(list[1][1]);
+        System.out.println(list[1][2]);
+
+        System.out.println(list[2][0]);
+        System.out.println(list[2][1]);
+        System.out.println(list[2][2]);
+
     }
+
+
+
 
 }
