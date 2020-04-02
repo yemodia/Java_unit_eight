@@ -9,7 +9,7 @@ public class ArrayCalculations {
 // If the row is less than 0 or is greater than
         // the number of rows it is not valid. Return -1 if not valid.
 
-        if (row < 0 || row > arr[row].length){
+        if (row < 0 || row > arr.length){
             return -1;
         }
 
@@ -68,10 +68,36 @@ return columnTotal;
     }
 
 
+    public static int diagonalSum(int[][] arr, int direction) {
+        int diSum = 0;
+        if (direction == 0){
+            int row = 0; int col = 0;
+            while (row < arr.length){
+                diSum += arr[row][col];
+                row++;
+                col++;
+            }
+        }
+        else if (direction == 1){
+            int row = arr.length - 1;
+            int col = 0;
+            while(col < arr[0].length){
+                diSum += arr[row][col];
+                row--;
+                col++;
+            }
+        }
+        else
+            diSum = -1;
+        return diSum;
+
+    }
 
 
 
     public static void main(String[] args){
+
+
         int[][] arr = {{1, 2, 3, 4}, {9, 7, 4, 3}, {0, 2, 5, 1}};
 
         System.out.println(rowSum(arr, 2));
@@ -79,6 +105,15 @@ return columnTotal;
 
         System.out.println(columnSum(arr, 2));
         System.out.println(columnSum(arr, 0));
+
+
+
+        int[][] nums = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        System.out.println(diagonalSum(nums, 1));
+        System.out.println(diagonalSum(nums, 0));
+
+
+
 
     }
 
